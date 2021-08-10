@@ -1,0 +1,22 @@
+
+
+
+
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-12"></div>
+<div class="col-lg-4 col-md-6 col-12 box">
+<h4>login</h4>
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <input type=text class="form-control" name="acno" formControlName="acno" placeholder="account number">
+    <div  class="invalid"  *ngIf="(this.loginForm.get('acno')?.touched||this.loginForm.get('acno')?.dirty)&&this.loginForm.get('acno')?.errors">invalid account number</div>
+    <input type=text class="form-control" name="pswd" formControlName="pswd" placeholder="password">
+    <div class="invalid" *ngIf="(this.loginForm.get('pswd')?.touched||this.loginForm.get('pswd')?.dirty)&&this.loginForm.get('pswd')?.errors">invalid password</div>
+    <input type="submit"  class="btn btn-danger"  (click)="login()" value="Login">
+</form>
+<a routerLink="register">sign up</a>
+</div>
+<div class="col-lg-4 col-md-6 col-12 "></div>
+
+</div>

@@ -1,0 +1,19 @@
+
+
+<div class="container">
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>DATE</th>
+                <th>EVENT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of events">
+                 <td>{{event.date}}</td>
+                 <td>{{event.event}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink="/dashboard">Home</a>
+</div>

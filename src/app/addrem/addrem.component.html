@@ -1,0 +1,20 @@
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-12"></div>
+    <div class="col-lg-4 col-md-6 col-12 box">
+
+<form [formGroup]="addForm" (ngSubmit)="add()">
+   
+    <input type="text" class="form-control" formControlName="date" placeholder="Date">
+    <div  class="invalid"  *ngIf="(this.addForm.get('date')?.touched||this.addForm.get('date')?.dirty)&&this.addForm.get('date')?.errors">invalid Date</div>
+    <input type="text"  class="form-control" formControlName="event" placeholder="Event">
+    <div  class="invalid"  *ngIf="(this.addForm.get('event')?.touched||this.addForm.get('event')?.dirty)&&this.addForm.get('event')?.errors">invalid Date</div>
+    <input type="submit"  class="btn btn-danger"  (click)="add()" value="add">
+    
+</form>
+<a routerLink="/dashboard">Home</a>
+
+    </div>
+    <div class="col-lg-4 col-md-6 col-12"></div>
+</div>
+
